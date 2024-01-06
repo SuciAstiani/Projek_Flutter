@@ -12,71 +12,89 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(50),
-                  bottomRight: Radius.circular(50))),
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(50),
+              bottomRight: Radius.circular(50),
+            ),
+          ),
           toolbarHeight: 230, // default is 56
           toolbarOpacity: 0.9,
-          title: Column(
+          backgroundColor: Colors.blueGrey,
+          title: const Column(
             children: [
               Center(
-                child: Container(
-                  child: CircleAvatar(
-                    radius: 50,
-                    backgroundImage: AssetImage('assets/images/me.jpg'),
-                  ),
+                child: CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/me.jpeg'),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.all(9.0),
+                padding: EdgeInsets.all(9.0),
                 child: Text(
                   "Suci Astiani",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
-              Text("Student", style: TextStyle(height: 1, fontSize: 14))
+              Text(
+                "Student",
+                style: TextStyle(
+                  height: 1,
+                  fontSize: 14,
+                  color: Colors.white,
+                ),
+              )
             ],
           ),
         ),
         body: Center(
           child: Container(
             width: 400,
-            margin: EdgeInsets.only(top: 35),
+            margin: const EdgeInsets.only(top: 35),
             child: Column(
               children: [
-                Text("Tentang Saya", style: TextStyle(fontWeight: FontWeight.bold)),
-                Container(
-                    margin: EdgeInsets.all(15),
-                    child: Text(
-                        "Hai, Saya Suci Astiani, saya berasal dari Singaraja. Saya saat ini sedang menempuh study di Undiknas Denpasar. Saya kuliah di FTI/ Teknologi Informasi mengambil kosentrasi UI/UX. Akhir kata saya ucapkan terima kasih",
-                        maxLines: 4,
-                        textAlign: TextAlign.center,
-                        style:
-                            TextStyle(color: Color.fromARGB(255, 31, 15, 15).withOpacity(0.5)))),
-                Container(
-                  width: 155,
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(color: Colors.black, width: 0.1))),
+                const Text(
+                  "Tentang Saya",
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 Container(
-                  margin: EdgeInsets.all(10),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text("Skills",
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                  margin: const EdgeInsets.all(15),
+                  child: const Text(
+                    "Hai, Saya Suci Astiani, saya berasal dari Singaraja. Saya saat ini sedang menempuh study di Undiknas Denpasar. Saya kuliah di FTI/ Teknologi Informasi mengambil kosentrasi UI/UX. Akhir kata saya ucapkan terima kasih",
+                    maxLines: 4,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(color: Colors.black),
                   ),
                 ),
                 Container(
-                    child: SizedBox(
+                  width: 155,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.1),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      "Keahlian",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+                SizedBox(
                   width: 300,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Column(
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "5",
@@ -104,7 +122,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "4",
@@ -132,7 +150,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "3",
@@ -160,7 +178,7 @@ class MyApp extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               Text(
                                 "3",
@@ -188,24 +206,26 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                )),
-                Container(
-                  margin: EdgeInsets.only(top: 10),
-                  width: 155,
-                  decoration: BoxDecoration(
-                      border: Border(
-                          bottom: BorderSide(color: Colors.black, width: 0.1))),
                 ),
                 Container(
-                  margin: EdgeInsets.all(20),
-                  child: Column(children: [
+                  margin: const EdgeInsets.only(top: 10),
+                  width: 155,
+                  decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 0.1),
+                    ),
+                  ),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(20),
+                  child: const Column(children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0),
                           child: Text(
-                            "Find me on",
+                            "Sosial media saya",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -217,7 +237,7 @@ class MyApp extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Padding(
-                              padding: const EdgeInsets.all(5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: Icon(
                                 Icons.facebook,
                                 color: Colors.blueAccent,
@@ -225,7 +245,7 @@ class MyApp extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: Icon(
                                 Icons.tiktok,
                                 color: Colors.blueAccent,
@@ -233,7 +253,7 @@ class MyApp extends StatelessWidget {
                               ),
                             ),
                             Padding(
-                              padding: const EdgeInsets.all(5.0),
+                              padding: EdgeInsets.all(5.0),
                               child: Icon(
                                 Icons.telegram,
                                 color: Colors.blueAccent,
